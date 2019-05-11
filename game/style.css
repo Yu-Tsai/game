@@ -1,0 +1,57 @@
+*{ 
+margin: 0; 
+padding: 0; 
+}
+body{
+    background-color: #000000;
+}
+
+.gameBase{
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    width:80vw;
+    height:100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.scoreboard {
+    height: 10vh;
+    width: 8vw;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.fallPic1{
+    height: 100px;
+    width:100px;
+}
+
+.fallPic2{
+    height: 50px;
+    width: 50px;
+}
+
+.catcherPic1{
+    height: 50px;
+    width: 150px;
+}
+
+.ui-widget-overlay { 
+    position: absolute; 
+    background: #aaaaaa;
+    opacity: 0.3;
+    z-index: 100;
+}
+
+.ui-front {
+    z-index: 100;
+}
+
+body > input{
+    width:20px;
+    background-color:black;
+}
