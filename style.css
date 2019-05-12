@@ -1,0 +1,106 @@
+*{ 
+margin: 0; 
+padding: 0; 
+}
+
+.leftmargin{
+    background-color:#41338C;
+    width: 10%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rightmargin{
+    background-color:#41338C;
+    width: 10%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+.marginBtn{
+    height: 7.5%;
+    width: auto;
+    position: absolute;
+    top:4.375%;
+    left:30%;
+}
+
+.marginPic{
+    height:83.75%;
+    width:auto;
+    position:absolute;
+    top:16.25%;
+    left:40%;
+}
+
+.pause{
+    z-index:-1;
+}
+
+.gameBase{
+    /*position: absolute;
+    /*top: 0;
+    left: 10vw;
+    width:80vw;
+    height:100vh;*/
+    background-image:url("background.png");
+    background-size:100% 100%;
+    overflow: hidden;
+}
+
+.fallPic1{
+    height: auto;
+    width:100px;
+}
+
+.fallPic2{
+    height: auto;
+    width: 100px;
+}
+
+.catcherPic1{
+    height: auto;
+    width: 200px;
+}
+
+.score{
+    width:16.67%;
+    height:9.5%;
+    background-image:url("score.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:4.375%;
+    left:30px;
+    z-index:10;
+}
+
+.score > span{
+    width:62%;
+    height:37%;
+    position:absolute;
+    top:36%;
+    left:32%;
+}
+
+.time{
+    width:16.67%;
+    height:9.5%;
+    background-image:url("time.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:4.375%;
+    left:264px;
+    z-index:10;
+}
+
+.time > span{
+    width:62%;
+    height:37%;
+    position:absolute;
+    top:36%;
+    left:32%;
+}
