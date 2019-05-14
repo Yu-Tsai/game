@@ -82,12 +82,12 @@ function setFall1() {
         "width": object.fallW1
     })
     $(".gameBase").append(fall1)
-    fall1.stop().animate({ top: gamebase.height() + object.fallH1 }, 3000, function () { fall1.remove(); });
+    fall1.stop().animate({ top: gamebase.height() + object.fallH1 }, 2500, function () { fall1.remove(); });
     $(".pause").on("click", function () {
         fall1.stop(true);
     })
     $(".start").on("click", function () {
-        fall1.animate({ top: gamebase.height() + object.fallH1 }, 3000, function () { fall1.remove(); });
+        fall1.animate({ top: gamebase.height() + object.fallH1 }, 2500, function () { fall1.remove(); });
     })
 }
 
@@ -103,12 +103,12 @@ function setFall2() {
         "width": object.fallW2
     })
     $(".gameBase").append(fall2)
-    fall2.stop().animate({ top: gamebase.height() + object.fallH2 }, 3000, function () { fall2.remove(); });
+    fall2.stop().animate({ top: gamebase.height() + object.fallH2 }, 2500, function () { fall2.remove(); });
     $(".pause").on("click", function () {
         fall2.stop(true);
     })
     $(".start").on("click", function () {
-        fall2.animate({ top: gamebase.height() + object.fallH2 }, 3000, function () { fall2.remove(); });
+        fall2.animate({ top: gamebase.height() + object.fallH2 }, 2500, function () { fall2.remove(); });
     })
 }
 
@@ -141,27 +141,28 @@ function touch() {
         playerDir[3] = $(".playerObj").offset().left + $(".playerObj").width();
 
 
-        /*if (playerDir[3] > fallDir[1] && playerDir[1] < fallDir[1] || playerDir[1] > fallDir[1] && playerDir[3] < fallDir[3] || playerDir[1] < fallDir[3] && playerDir[3] > fallDir[3]) {
+        if (playerDir[3] > fallDir[1] && playerDir[1] < fallDir[1] || playerDir[1] > fallDir[1] && playerDir[3] < fallDir[3] || playerDir[1] < fallDir[3] && playerDir[3] > fallDir[3]) {
             if (playerDir[0] < fallDir[2] && playerDir[2] > fallDir[2] || playerDir[0] < fallDir[0] && playerDir[2] > fallDir[0] || playerDir[0] < fallDir[2] && playerDir[2] > fallDir[0]) {
                 if (caught == 0) {
                     caught = 1;
-                    //$(this).stop().animate({ top: playerDir[0], left: playerDir[1] - gamebase.offset().left }, 100, function () { $(this).remove(); caught = 0; });
+                    $(this).stop().animate({ top: playerDir[0], left: playerDir[1], width:0, height:0/* - gamebase.offset().left*/ }, 100, function () { $(this).remove(); caught = 0; });
                     //$(this).stop().slideUp(1000, function () { $(this).remove(); caught = 0; });
                     //$(this).slideUp(1000, function () { $(this).remove(); caught = 0; });
                     //.slideUp(1000, function () { $(this).remove(); });
                     score = score + 1;
+                    $(".score > span").html(score);
                     //$(".score").html("score: " + score);
                     //caught = 0;
                 }
             }
-        }*/
-        if (playerDir[3] > fallDir[1] && playerDir[1] < fallDir[1] || playerDir[1] > fallDir[1] && playerDir[3] < fallDir[3] || playerDir[1] < fallDir[3] && playerDir[3] > fallDir[3]) {
+        }
+        /*if (playerDir[3] > fallDir[1] && playerDir[1] < fallDir[1] || playerDir[1] > fallDir[1] && playerDir[3] < fallDir[3] || playerDir[1] < fallDir[3] && playerDir[3] > fallDir[3]) {
             if (playerDir[0] < fallDir[0]) {
                 $(this).remove();
                 score = score + 1;
                 $(".score > span").html(score);
             }
-        }
+        }*/
     });
 }
 
